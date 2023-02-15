@@ -2,7 +2,7 @@ FROM continuumio/miniconda3
 
 RUN apt-get update && apt-get -y upgrade
 
-ADD . /geneface
+RUN git clone https://github.com/zimonitrome/GeneFace
 WORKDIR /geneface
     # && find . -type f -exec sed -i 's/\/home\/yezhenhui\/anaconda3\/envs\/geneface\/bin\/python/\/opt\/conda\/envs\/geneface\/bin\/python/g' {} +
 
